@@ -9,6 +9,7 @@ $worker1->setSalary(1000);
 $worker2 = new Worker();
 $worker2->setName('Вася');
 $worker2->setAge(26);
+
 $worker2->setSalary(2000);
 
 
