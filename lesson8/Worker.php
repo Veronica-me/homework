@@ -8,7 +8,7 @@ class Worker {
 
     public function setName(string $name)
     {
-        return $this->name = $name;
+        $this->name = $name;
     }
 
     public function getName()
@@ -17,8 +17,9 @@ class Worker {
     }
 
     public function setAge(int $age)
-    {
-        return $this->age = $age;
+    { if (checkAge($age)){
+        $this->age = $age;
+        }
     }
 
 
@@ -40,6 +41,12 @@ class Worker {
         return $this->salary;
     }
 
-
+    private function checkAge($age)
+    {
+        if ($age > 1 && $age < 100){
+            return true;
+        }else {return false
+        }
+    }
 
 }
