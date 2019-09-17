@@ -1,16 +1,20 @@
 <?php
-$count = 0;
+
 $name = $_GET['name'] ?? null;
 if ($name) {
     setcookie('name', $_GET['name']);
-    $count++;
+    $count = $_COOKIE['visit'] += 1;
+    setcookie('visit', $count);
 }
+else {
+    setcookie('visit', '1');
+}
+
 if (array_key_exists('name', $_COOKIE)) {
     printf('Имя: %s', $_COOKIE['name']);
-
 }
 echo '<br>';
-printf('Страница показана: %s раз', $count);
+printf('Страница показана: %s раз', $_COOKIE['visit']);
 ?>
 <html>
 <head>
