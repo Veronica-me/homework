@@ -16,6 +16,7 @@ if (array_key_exists('name', $_COOKIE)) {
 echo '<br>';
 printf('Страница показана: %s раз', $_COOKIE['visit']);
 ?>
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
