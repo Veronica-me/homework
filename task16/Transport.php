@@ -15,7 +15,7 @@ abstract class Transport
     {
         if ($status === 'stop' && self::$filling !=0 ){
             echo '<br> Транспорт заполнен, требуется разгрузка <br>';
-        } elseif ($status === 'stop' && self::$filling =0) {
+        } elseif ($status === 'stop' && self::$filling === 0) {
             $this->status = $status;
         } elseif ($status === 'go' || $status === 'load' || $status === 'unload'){
             $this->status = $status;
