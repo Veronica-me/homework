@@ -4,7 +4,7 @@ class Write
 {
     private $readCsvFile = null;
 
-    public function __construct ($csvFile)
+    public function __construct($csvFile)
     {
         if (file_exists($csvFile)) {
             $this->readCsvFile = $csvFile;
@@ -13,11 +13,11 @@ class Write
         }
     }
 
-    public function setFile($csv){
+    public function setFile($csv)
+    {
         $handle = fopen($this->readCsvFile, 'a');
-        foreach ($csv as $value){
-            fputcsv($handle, explode(';', $value));
-        }
+
+        fputcsv($handle, $csv, ';');
 
         fclose($handle);
     }
