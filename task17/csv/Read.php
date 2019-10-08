@@ -1,6 +1,6 @@
 <?php
 
-class Read
+class Read implements InterfaceReadUser
 {
 
     private $readCsvFile = null;
@@ -14,7 +14,8 @@ class Read
         }
     }
 
-    public function getFileData(){
+    public function getFileData()
+    {
 
         $handle = fopen($this->readCsvFile, 'r');
 
