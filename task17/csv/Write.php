@@ -1,6 +1,6 @@
 <?php
 
-class Write
+class Write implements InterfaceWriteUser
 {
     private $readCsvFile = null;
 
