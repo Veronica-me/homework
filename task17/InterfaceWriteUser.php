@@ -1,6 +1,6 @@
 <?php
 interface InterfaceWriteUser
 {
-    public function setFile();
+    public function setFile($csv);
 
 }
